@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentPMovistar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecundaryLigth"
+    tools:context=".ui.paquetes.movistar.FragmentTipoPaqueteMovistar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/bg_claro">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/todoMov"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="3"
+                    android:text="@string/str_paq_tod" />
+
+                <Button
+                    android:id="@+id/movisVoz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="3"
+                    android:text="@string/str_voz" />
+
+                <Button
+                    android:id="@+id/interMovis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="3"
+                    android:text="@string/str_paq_int" />
+
+                <Button
+                    android:id="@+id/larDMov"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="3"
+                    android:text="@string/str_ldi" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/logoMovistar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/recarga_movistar" />
+
+    </LinearLayout>
+
+</FrameLayout>

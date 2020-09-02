@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF3829</color>
+    <color name="colorPrimaryLigth">#ff6659</color>
+    <color name="colorPrimaryDark">#9a0007</color>
+
+    <color name="colorSecundary">#9a0007</color>
+    <color name="colorSecundaryLigth">#e2f1f8</color>
+    <color name="colorSecundaryDark">#808e95</color>
+
+    <color name="todoInter">#E857ABFD</color>
+    <color name="voz">#7b1fa2</color>
+    <color name="todoIc">#303f9f</color>
+    <color name="largaD">#ffa000</color>
+    <color name="reventa">#00acc1</color>
+    <color name="apps">#43a047</color>
+    <color name="prepago">#f4511e</color>
+
+    <color name="registrarse">#303f9f</color>
+
+
+
+
+
+    <color name="colorAccent">#007583</color>
+    <color name="violeta">#E040FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="negro">#000000</color>
+    <color name="rojoclaro">#DA291C</color>
+    <color name="bg_paquetes">#005cb2</color>
+    <color name="back_gris">#7E7C7C</color>
+</resources>

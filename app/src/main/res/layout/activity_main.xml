@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_gris"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tUser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/str_username"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/tPass"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idUsername"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/tUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/recarga_claro"
+        tools:ignore="VectorDrawableCompat" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/recarga"
+        android:textColor="@color/negro"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/str_password"
+        app:boxStrokeColor="@color/colorAccent"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/idIngresar"
+        app:layout_constraintEnd_toEndOf="@+id/tUser"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tUser">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idPassword"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/idIngresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/str_ingresar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/idSesionI"
+        app:layout_constraintEnd_toEndOf="@+id/tPass"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tPass"
+        app:layout_constraintTop_toBottomOf="@+id/tPass"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <RadioButton
+        android:id="@+id/idSesionI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/colorPrimary"
+        android:text="@string/sesionIn"
+        app:layout_constraintBottom_toTopOf="@+id/idRegistrase"
+        app:layout_constraintEnd_toEndOf="@+id/idIngresar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/idIngresar"
+        app:layout_constraintTop_toBottomOf="@+id/idIngresar" />
+
+    <Button
+        android:id="@+id/idRegistrase"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:paddingLeft="4dp"
+        android:text="@string/str_registrarse"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/idSesionI"
+        app:layout_constraintStart_toStartOf="@+id/idSesionI"
+        app:layout_constraintTop_toBottomOf="@+id/idSesionI"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
