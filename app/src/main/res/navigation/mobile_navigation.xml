@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_dashboard">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.siscompal.clarorecarga.ui.pines.TiposPinesFragment"
+        android:name="com.siscompal.clarorecarga.InfoClienteFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_pines" />
+        tools:layout="@layout/fragment_info_cliente" />
 </navigation>

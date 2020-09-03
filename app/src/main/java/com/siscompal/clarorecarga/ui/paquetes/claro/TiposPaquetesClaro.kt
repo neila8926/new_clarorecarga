@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import com.siscompal.clarorecarga.ui.paquetes.claro.RealizarPaquetesClaro
 
@@ -16,13 +17,13 @@ import com.siscompal.clarorecarga.R
  */
 class TiposPaquetesClaro : Fragment() {
 
-    var internet: CardView?=null
-    var voz:CardView?=null
-    var todoInc:CardView?=null
-    var ldi:CardView?=null
-    var reventa:CardView?=null
-    var prepago:CardView?=null
-    var apps:CardView?=null
+    var internet: Button?=null
+    var voz:Button?=null
+    var todoInc:Button?=null
+    var ldi:Button?=null
+    var reventa:Button?=null
+    var prepago:Button?=null
+    var apps:Button?=null
 
 
     override fun onCreateView(

@@ -6,14 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 
 import com.siscompal.clarorecarga.R
 
 
 class FragmentTiposPaqueteEtb : Fragment() {
-    var comboEtb:CardView?=null
-    var ldiEtb:CardView?=null
+    var comboEtb:Button?=null
+    var ldiEtb:Button?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

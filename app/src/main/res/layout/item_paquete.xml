@@ -16,18 +16,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/itemNombreP"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="10dp"
-            android:layout_weight="2"
-            android:gravity="center_vertical"
-            android:paddingStart="17dp"
-            android:text="TextView"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
-
         <ImageView
             android:id="@+id/itemLogoP"
             android:layout_width="0dp"
@@ -35,6 +23,20 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="2"
             app:srcCompat="@drawable/paquete_claro" />
+
+        <TextView
+            android:id="@+id/itemNombreP"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:paddingStart="17dp"
+            android:text="TextView"
+            android:textColor="@color/negro"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

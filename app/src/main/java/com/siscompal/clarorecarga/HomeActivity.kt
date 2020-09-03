@@ -22,6 +22,7 @@ import com.siscompal.clarorecarga.ui.paquetes.exito.RealizarPaquetesExito
 import com.siscompal.clarorecarga.ui.paquetes.kalley.RealizarPaquetesKalley
 import com.siscompal.clarorecarga.ui.paquetes.wings.RealizarPaquetesWings
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.siscompal.clarorecarga.interfaces.ItemSeleccionado
 import org.json.JSONObject
 import java.lang.Exception
 import java.text.SimpleDateFormat
@@ -29,7 +30,7 @@ import java.util.*
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
-class HomeActivity : AppCompatActivity(), FragmentCom {
+class HomeActivity : AppCompatActivity(), FragmentCom,ItemSeleccionado {
     var toolbar:Toolbar?=null
     var parametros:String="";
     val version= Constantes.VERSION_CODE;
@@ -84,49 +85,33 @@ class HomeActivity : AppCompatActivity(), FragmentCom {
         return toHexString(mac.doFinal(data.toByteArray()))
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_toolbar,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item?.itemId){
-            R.id.cRecargas->{
-                var intent=Intent(this, UltimasRecargas::class.java)
-                startActivity(intent)
-                return true
-            }
-            R.id.cEfecty->{
-                var alertDialog=AlertDialog.Builder(this)
-                alertDialog.setTitle("Datos Para Consignar en Efecty")
-                alertDialog.setMessage("Convenio: 110911\nReferencia: 110${idCliente}")
-                    .setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->  })
-                alertDialog.show()
-                return true
-            }
-            R.id.cSaldo->{
-                parametros = "mov|sal|" + horaActual.toString() + "|" + hmac + "|" +idCliente+ "|" + version
-                Acciones().execute()
-                return true
-            }
-            R.id.sesion->{
-
-                SharedPreferenceManager.deleteSomeValue()
-                var intent=Intent(this,MainActivity::class.java)
-                startActivity(intent)
-                finish()
-                return true
-            }
-            R.id.transferencias->{
-                var intent=Intent(this,BancosActivity::class.java)
-                startActivity(intent)
-                return true
-            }
-
-            else->( return super.onOptionsItemSelected(item))
+    override fun itemSeleccionado(item: String) {
+        if(item=="Consultar Saldo"){
+            parametros = "mov|sal|" + horaActual.toString() + "|" + hmac + "|" +idCliente+ "|" + version
+            Acciones().execute()
+        }
+        else if(item=="Consultar Ultimas Recargas"){
+            var intent=Intent(this, UltimasRecargas::class.java)
+            startActivity(intent)
+        }
+        else if(item=="Mi Código Efecty"){
+            var alertDialog=AlertDialog.Builder(this)
+            alertDialog.setTitle("Datos Para Consignar en Efecty")
+            alertDialog.setMessage("Convenio: 110911\nReferencia: 110${idCliente}")
+                .setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->  })
+            alertDialog.show()
+        }
+        else if(item=="Bancos y Promociones"){
+            var intent=Intent(this,BancosActivity::class.java)
+            startActivity(intent)
 
         }
-
+        else if(item=="Cerrar Sesión"){
+            SharedPreferenceManager.deleteSomeValue()
+            var intent=Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

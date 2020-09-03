@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import com.siscompal.clarorecarga.R
 
@@ -13,10 +14,10 @@ import com.siscompal.clarorecarga.R
  * A simple [Fragment] subclass.
  */
 class FragmentTiposPaquetesVirgin : Fragment() {
-    var antiplanes:CardView?=null
-    var bolsasDato:CardView?=null
-    var bolsasVoz:CardView?=null
-    var whatsapp:CardView?=null
+    var antiplanes:Button?=null
+    var bolsasDato:Button?=null
+    var bolsasVoz:Button?=null
+    var whatsapp:Button?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

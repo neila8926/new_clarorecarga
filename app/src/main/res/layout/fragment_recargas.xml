@@ -106,7 +106,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:text="@string/mil"
-                    app:layout_columnWeight="1" />
+                    app:layout_columnWeight="1"
+                  />
 
                 <Button
                     android:id="@+id/btnDosMil"
@@ -114,7 +115,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/dos_mil"
-                    app:layout_columnWeight="2" />
+                    app:layout_columnWeight="2"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/colorPrimary"/>
 
                 <Button
                     android:id="@+id/btnTresMil"
@@ -122,7 +125,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/tres_mil"
-                    app:layout_columnWeight="3" />
+                    app:layout_columnWeight="3"
+                   />
 
                 <Button
                     android:id="@+id/btnCincoMil"
@@ -131,7 +135,9 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:text="@string/cinco_mil"
-                    app:layout_columnWeight="1" />
+                    app:layout_columnWeight="1"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/colorPrimary"/>
 
                 <Button
                     android:id="@+id/btnDiezMil"
@@ -139,7 +145,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/diez_mil"
-                    app:layout_columnWeight="2" />
+                    app:layout_columnWeight="2"
+                    />
 
                 <Button
                     android:id="@+id/btnVeinteMil"
@@ -147,7 +154,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/veinte_mil"
-                    app:layout_columnWeight="3" />
+                    app:layout_columnWeight="3"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/colorPrimary"/>
             </androidx.gridlayout.widget.GridLayout>
 
             <Button
